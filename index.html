@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freiduría online</title>
+    <link rel="stylesheet" href="ex_UD4_UD5.css">
+</head>
+<body>
+    <h1>¡¡Pide aquí tu rico pescaíto!!</h1>
+    <img src="pescado_frito.jpg" alt="Bandeja pescado frito">
+    
+    <form id="pedidoForm">
+        <fieldset>
+            <legend>Datos del cliente</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" minlength="18" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+            
+            <label for="hora">Hora aproximada de entrega:</label>
+            <input type="time" id="hora" name="hora" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Pedido de pescado</legend>
+            <label for="tipo_pescado">Tipo de pescado:</label>
+            <select id="tipo_pescado" name="tipo_pescado">
+                <option value="calamares">Calamares (6€)</option>
+                <option value="adobo">Adobo (7€)</option>
+                <option value="boquerones">Boquerones (8€)</option>
+            </select>
+            
+            <label for="cantidad">Nº de raciones:</label>
+            <select id="cantidad" name="cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+            <label>Acompañamiento:</label>
+            <input type="checkbox" id="patatas" name="acompanamiento" value="4"> Patatas fritas (4€)
+            <input type="checkbox" id="ensaladilla" name="acompanamiento" value="4"> Ensaladilla (4€)
+            <input type="checkbox" id="manzanilla" name="acompanamiento" value="4"> Botella de Manzanilla (4€)
+        </fieldset>
+        
+        <fieldset>
+            <legend>Pago</legend>
+            <label for="pago">Método de pago:</label>
+            <select id="pago" name="pago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </fieldset>
+        
+        <label for="instrucciones">Instrucciones adicionales:</label>
+        <textarea id="instrucciones" name="instrucciones" maxlength="150" placeholder="Escribe tus preferencias..."></textarea>
+        <p id="contador">0/150 caracteres</p>
+        
+        <p>Total: <span id="total">0€</span></p>
+        
+        <button type="submit" id="enviarPedido">Enviar Pedido</button>
+        <button type="button" id="modoOscuro">Modo Oscuro</button>
+    </form>
+    
+    <footer>
+        <p>Creado por [Tu Nombre]</p>
+    </footer>
+    
+    <script src="ex_UD4_UD5.js"></script>
+</body>
+</html>
